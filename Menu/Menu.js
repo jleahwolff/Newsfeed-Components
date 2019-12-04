@@ -35,5 +35,16 @@ let menuItems = [
 */
 
 function menuFunc(menuItems){
-  
+  const menuDiv = document.createElement('div');
+  const unList = document.createElement('ul');
+
+  menuDiv.classList.add('menu');
+
+  menuDiv.appendChild(unList);
+
+  menuItems.forEach( () => {
+    let listItem = document.createElement('li');
+    
+  }
+
 }
