@@ -150,20 +150,25 @@ section.appendChild(spanBtn);
 //event listener-------------------------------
 spanBtn.addEventListener('click', () => {
   section.classList.toggle('article-open');
-  if (spanBtn.textContent === 'expand'){
-    spanBtn.textContent = 'close'
+  if (spanBtn.textContent != 'open'){
+    spanBtn.textContent = 'Close'
   } else {
-      spanBtn.textContent = 'expand';
+      spanBtn.textContent = 'Open';
     }
   })
 
-  return componentCreator;
+  return section;
 }
+//----------------------------------------------
+//map-------------------------------------------
+// const loopIt = document.querySelector('.articles');
+// for (i = 0; i < data.length; i++){
 
+// }
 const mapIt = document.querySelector('.articles');
+
 data.map(function(currentValue){
-  let anArticle = createArticle(currentValue);
+  let anArticle = componentCreator(currentValue);
   mapIt.appendChild(anArticle);
 });
-
 //---------------------------------------------
