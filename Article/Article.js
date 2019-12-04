@@ -112,3 +112,58 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+
+function componentCreator(data){
+//variables---------------------------------------
+const section = document.createElement('div');
+section.classList.add('article');
+
+const headerTwo = document.createElement('h2');
+headerTwo.textContent = data.title;
+
+const paraDate = document.createElement('p');
+paraDate.classList.add('date');
+paraDate.textContent = data.date;
+
+const paraOne = document.createElement('p');
+paraOne.textContent = data.firstParagraph;
+
+const paraTwo = document.createElement('p');
+paraTwo.textContent = data.secondParagraph;
+
+const paraThree = document.createElement('p');
+paraThree.textContent = data.thirdParagraph;
+
+const spanBtn = document.createElement('span');
+spanBtn.classList.add('expandButton');
+spanBtn.textContent = 'Open';
+//----------------------------------------------
+//append children-------------------------------
+section.appendChild(headerTwo);
+section.appendChild(paraDate);
+section.appendChild(paraOne);
+section.appendChild(paraTwo);
+section.appendChild(paraThree);
+section.appendChild(spanBtn);
+//---------------------------------------------
+//event listener-------------------------------
+spanBtn.addEventListener('click', () => {
+  section.classList.toggle('article-open');
+  if (spanBtn.textContent === 'expand'){
+    spanBtn.textContent = 'close'
+  } else {
+      spanBtn.textContent = 'expand';
+    }
+  })
+
+  return componentCreator;
+}
+
+const mapIt = document.querySelector('.articles');
+data.map(function(currentValue){
+  let anArticle = createArticle(currentValue);
+  mapIt.appendChild(anArticle);
+});
+
+//---------------------------------------------
