@@ -85,6 +85,16 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Jess',
+    date: 'Oct 27, 1993',
+    firstParagraph: `dor hodor hodor! Hodor hodor - HODOR hodor, hodor hodor hodor hodor hodor; hodor hodor? `,
+
+    secondParagraph: `dor hodor. Hodor. Hodor hodor... Hodor hodor hodor hodor hodor? `,
+
+    thirdParagraph: `Ho.`,
+
   }
 ];
 
@@ -150,10 +160,10 @@ section.appendChild(spanBtn);
 //event listener-------------------------------
 spanBtn.addEventListener('click', () => {
   section.classList.toggle('article-open');
-  if (spanBtn.textContent != 'open'){
-    spanBtn.textContent = 'Close'
+  if (spanBtn.textContent !== 'Open'){
+    spanBtn.textContent = 'Open'
   } else {
-      spanBtn.textContent = 'Open';
+      spanBtn.textContent = 'Close';
     }
   })
 
